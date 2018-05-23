@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Cleaning</title>
+  <link rel="stylesheet" href="dist/css/bootstrap.css">
+  <link rel="stylesheet" href="dist/css/github.css">
+  <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body>
+    <form method="post">
+      <div id="dropZone">
+        <span>Your html</span>
+        <div class="group-form">
+          <input type="file" name="file" id="fileElem" value="" style="display: none">
+          <label for="fileElem" class="button">Выбрать файл</label>
+        </div>
+      </div>
+
+      <div class="form-group ">
+        <input type="checkbox" id="backfix" class="checkbox" name="backfix" value="">
+        <span class="checkmark"></span>
+        <label for="backfix">Add backfix</label>
+      </div>
+      <div class="form-group ">
+        <input type="checkbox" id="jquery" class="checkbox" name="jquery" value="">
+        <span class="checkmark"></span>
+        <label for="jquery">Add jquery</label>
+      </div>
+      <div class="form-group ">
+        <input type="checkbox" id="dtime" class="checkbox" name="dtime" value="">
+        <span class="checkmark"></span>
+        <label for="dtime">Add dr-dtime</label>
+      </div>
+      <hr>
+      <div class="form-group pl0">
+        <input type="text" placeholder="Links in project" class="form-control" id="link" name="link" value="" list="links_list">
+        <datalist class="" id="links_list" name="links_list">
+          <option value="{link|purchanger.com}">Поп</option>
+          <option value="{link|plextrk.com}">Волюм</option>
+          <option value="http://wtsense.com/click.php?lp=1">Бином</option>
+          <option value="<?=$link?>">Facebook</option>
+        </datalist>
+      </div>
+      <hr>
+
+      <button class="btn btn-info btn-block" type="button" id="send_data" name="button">Convert</button>
+    </form>
+    <div class="col-7" style="position: relative">
+      <div id="pre_html" data-language="html" >
+      </div>
+      <div id="copy" title="Copy to clipboard"></div>
+      <div class="box" style="display: none;">
+        <div class="cat">
+          <div class="cat__body"></div>
+          <div class="cat__body"></div>
+          <div class="cat__tail"></div>
+          <div class="cat__head"></div>
+        </div>
+      </div>
+    </div>
+    <textarea id="hidden_pre"></textarea>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="dist/js/jgrowl.min.js" charset="utf-8"></script>
+    <script src="dist/js/rainbow.min.js" charset="utf-8"></script>
+    <script src="dist/js/generic.js" charset="utf-8"></script>
+    <script src="dist/js/html.js" charset="utf-8"></script>
+    <script src="dist/js/main.js"></script>
+</body>
+</html>
